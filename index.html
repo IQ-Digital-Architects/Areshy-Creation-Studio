@@ -1,204 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="google-site-verification" content="_5JTuo4SCAJzuH32k4xzd_6UOuGHT_6bavh5RhZL-TI" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Areshy Creation Studio | Haute Couture Art</title>
+    <title>Areshy Creation Studio | Bespoke Art</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
+    
     <style>
         :root { 
             --gold: #C5A059; 
-            --black: #0a0a0a; 
+            --royal-blue: #002366; 
+            --deep-blue: #050a14;
             --white: #ffffff;
-            --soft-gold: rgba(197, 160, 89, 0.1);
+            --soft-shadow: 0 10px 30px rgba(0,0,0,0.08);
         }
 
-        body { 
-            font-family: 'Montserrat', sans-serif; 
-            margin: 0; 
-            background: #fafafa; 
-            color: var(--black); 
-            overflow-x: hidden; 
-        }
+        body { font-family: 'Montserrat', sans-serif; margin: 0; background: #fcfcfc; color: var(--deep-blue); -webkit-font-smoothing: antialiased; }
 
-        /* Luxury Navigation */
+        /* LUXURY HEADER */
         header { 
-            padding: 40px 20px; 
-            text-align: center; 
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            position: sticky; 
-            top: 0; 
-            z-index: 1000;
-            border-bottom: 1px solid var(--soft-gold);
+            padding: 20px; text-align: center; background: var(--deep-blue);
+            position: sticky; top: 0; z-index: 1000; border-bottom: 3px solid var(--gold);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
         }
 
-        .brand-name { 
-            font-family: 'Cinzel', serif; 
-            font-size: clamp(24px, 5vw, 42px); 
-            color: var(--black); 
-            text-transform: uppercase; 
-            letter-spacing: 8px; 
-            margin: 0;
-            font-weight: 700;
-        }
+        .brand-name { font-family: 'Cinzel', serif; font-size: 30px; color: var(--gold); letter-spacing: 10px; margin: 0; font-weight: 700; }
+        .brand-sub { font-size: 9px; letter-spacing: 5px; color: var(--white); text-transform: uppercase; margin-top: 5px; opacity: 0.9; }
 
-        .brand-sub {
-            font-size: 10px;
-            letter-spacing: 5px;
-            color: var(--gold);
-            margin-top: 10px;
-            text-transform: uppercase;
-        }
-
-        /* International Slider */
-        .hero {
-            position: relative;
-            height: 85vh;
-            overflow: hidden;
-            background: var(--black);
-        }
-
-        .slides {
-            display: flex;
-            width: 400%;
-            height: 100%;
-            animation: kenburns 20s infinite alternate;
-        }
-
-        .slides img {
-            width: 25%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.7;
-        }
+        /* OPTIMIZED SLIDER */
+        .hero { position: relative; height: 60vh; overflow: hidden; background: var(--deep-blue); }
+        .slides { display: flex; width: 300%; height: 100%; animation: kenburns 12s infinite alternate ease-in-out; }
+        .slides img { width: 33.33%; height: 100%; object-fit: cover; opacity: 0.55; }
 
         @keyframes kenburns {
-            0% { transform: scale(1) translateX(0); }
-            100% { transform: scale(1.1) translateX(-5%); }
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
         }
 
         .hero-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: white;
-            z-index: 5;
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            text-align: center; color: white; z-index: 5; width: 100%;
         }
+        .hero-content h1 { font-family: 'Cinzel', serif; font-size: clamp(24px, 8vw, 45px); color: var(--gold); margin: 0; text-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+        .hero-content p { letter-spacing: 4px; text-transform: uppercase; font-size: 10px; margin-top: 15px; font-weight: 400; }
 
-        .hero-content h1 {
-            font-family: 'Cinzel', serif;
-            font-size: clamp(30px, 6vw, 60px);
-            margin-bottom: 20px;
-            border-bottom: 1px solid var(--gold);
-            display: inline-block;
-            padding-bottom: 10px;
-        }
-
-        /* Floating Luxury WhatsApp */
-        .float-wa { 
-            position: fixed; 
-            bottom: 40px; 
-            right: 40px; 
-            background: var(--black); 
-            color: var(--gold); 
-            padding: 18px 25px; 
-            border: 1px solid var(--gold);
-            text-decoration: none; 
-            z-index: 2000; 
-            font-size: 12px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            transition: 0.4s;
-        }
-
-        .float-wa:hover {
-            background: var(--gold);
-            color: white;
-        }
-
-        /* Elegant Grid */
-        .container { max-width: 1400px; margin: 80px auto; padding: 0 40px; }
+        /* PRODUCT GRID */
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 35px; }
         
-        .section-header { text-align: center; margin-bottom: 60px; }
-        .section-header h2 { font-family: 'Cinzel', serif; font-size: 32px; letter-spacing: 4px; }
-
-        .grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
-            gap: 50px; 
-        }
-
         .card { 
-            background: transparent; 
-            transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-            position: relative;
+            background: white; border: 1px solid #f0f0f0; transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1); 
+            overflow: hidden; border-radius: 2px;
         }
+        .card:hover { transform: translateY(-12px); border-color: var(--gold); box-shadow: var(--soft-shadow); }
 
-        .img-container {
-            overflow: hidden;
-            position: relative;
-            aspect-ratio: 1/1.2;
-        }
+        .img-container { aspect-ratio: 1/1; overflow: hidden; position: relative; }
+        .img-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s ease; }
+        .card:hover img { transform: scale(1.1); }
 
-        .card img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
-            transition: 1s ease;
-        }
-
-        .card:hover img { transform: scale(1.08); }
-
-        .info { 
-            padding: 25px 0; 
-            text-align: left; 
-            border-bottom: 1px solid #eee;
-          }
-
-        .info h3 { 
-            font-size: 14px; 
-            margin: 0; 
-            font-weight: 400; 
-            letter-spacing: 2px; 
-            text-transform: uppercase;
-            color: #333;
-        }
+        .info { padding: 25px; text-align: center; }
+        .info h3 { font-size: 13px; letter-spacing: 1.5px; margin-bottom: 20px; height: 35px; font-weight: 400; color: #333; text-transform: uppercase; }
         
+        /* MODERN BUTTON */
         .buy-btn { 
-            display: inline-block; 
-            margin-top: 15px;
-            color: var(--gold); 
-            text-decoration: none; 
-            font-size: 11px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            font-weight: 600;
+            display: block; background: var(--royal-blue); color: var(--gold); 
+            padding: 14px; text-decoration: none; font-size: 11px; font-weight: 700;
+            border: 1px solid var(--gold); text-transform: uppercase; letter-spacing: 2px;
+            transition: all 0.4s ease;
         }
+        .buy-btn:hover { background: var(--gold); color: white; letter-spacing: 3px; }
 
-        .buy-btn::after {
-            content: ' →';
-            transition: 0.3s;
-        }
-
-        .buy-btn:hover::after { padding-left: 10px; }
-
+        /* LUXURY FOOTER */
         footer { 
-            background: #000; 
-            color: #777; 
-            padding: 80px 20px; 
-            text-align: center; 
+            background: var(--deep-blue); color: var(--white); 
+            padding: 50px 20px; text-align: center; border-top: 5px solid var(--gold);
         }
-
-        .footer-logo { font-family: 'Cinzel', serif; color: var(--white); font-size: 24px; letter-spacing: 5px; margin-bottom: 20px; }
-        .copyright { font-size: 10px; letter-spacing: 2px; margin-top: 40px; border-top: 1px solid #222; padding-top: 20px; }
+        .footer-logo { font-family: 'Cinzel', serif; color: var(--gold); font-size: 26px; letter-spacing: 5px; margin-bottom: 20px; }
+        
+        .dev-credit { font-size: 12px; margin: 25px 0; color: #aaa; letter-spacing: 2px; }
+        .dev-credit span { color: var(--gold); font-weight: 600; text-decoration: underline; }
+        
+        .copyright { font-size: 9px; margin-top: 35px; color: #666; letter-spacing: 2px; border-top: 1px solid #1a1a1a; padding-top: 25px; }
+        
+        /* WHATSAPP FLOAT */
+        .float-wa { 
+            position: fixed; bottom: 30px; right: 30px; 
+            background: #25D366; color: white; padding: 16px 28px; 
+            border-radius: 50px; text-decoration: none; z-index: 2000; font-weight: bold;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.25); font-size: 12px; text-transform: uppercase;
+            letter-spacing: 1px; transition: 0.3s;
+        }
+        .float-wa:hover { transform: scale(1.05); }
     </style>
 </head>
 <body>
 
-<a href="https://wa.me/923036871091" class="float-wa">Enquire Now</a>
+<a href="https://wa.me/923036871091" class="float-wa">WhatsApp Order</a>
 
 <header>
     <div class="brand-name">Areshy</div>
@@ -210,26 +108,26 @@
         <img src="https://i.ibb.co/YBHgg9Qr/Whats-App-Image-2026-02-04-at-10-12-10-PM-Copy.jpg">
         <img src="https://i.ibb.co/JwM3BpPW/Whats-App-Image-2026-02-04-at-10-12-09-PM-Copy.jpg">
         <img src="https://i.ibb.co/hJn871Sz/Whats-App-Image-2026-02-04-at-10-12-08-PM-Copy.jpg">
-        <img src="https://i.ibb.co/PvVFCWgs/ACS-11.jpg">
     </div>
     <div class="hero-content">
         <h1>Bespoke Artistry</h1>
-        <p style="letter-spacing: 5px; text-transform: uppercase; font-size: 12px; font-weight: 200;">Handcrafted in Pakistan • Shipped Worldwide</p>
+        <p>Delivery Nationwide • Only in Pakistan</p>
     </div>
 </div>
 
 <div class="container">
-    <div class="section-header">
-        <h2>The Collection</h2>
-        <div style="width: 50px; height: 1px; background: var(--gold); margin: 20px auto;"></div>
-    </div>
     <div class="grid" id="main-grid"></div>
 </div>
 
 <footer>
     <div class="footer-logo">Areshy</div>
-    <p style="font-size: 12px;">Studio Address: Pakistan | Worldwide Delivery</p>
-    <p style="font-size: 12px;">WhatsApp: +92 303 6871091</p>
+    <p style="font-size: 13px; color: #ccc;">The Pinnacle of Handcrafted Arts & Decor</p>
+    <p style="font-size: 13px; color: var(--gold); margin-top: 10px;">Enquiries: +92 303 6871091</p>
+    
+    <div class="dev-credit">
+        Developed by <span>Engineer Ihsan Qadeer</span>
+    </div>
+
     <div class="copyright">
         © 2026 ARESHY CREATION STUDIO. ALL RIGHTS RESERVED.
     </div>
@@ -237,21 +135,19 @@
 
 <script>
     const products = [
-        { url: "https://i.ibb.co/YBHgg9Qr/Whats-App-Image-2026-02-04-at-10-12-10-PM-Copy.jpg", name: "Kids Educational Kit No. 01" },
+        { url: "https://i.ibb.co/YBHgg9Qr/Whats-App-Image-2026-02-04-at-10-12-10-PM-Copy.jpg", name: "Kids Educational Kit" },
         { url: "https://i.ibb.co/JwM3BpPW/Whats-App-Image-2026-02-04-at-10-12-09-PM-Copy.jpg", name: "Imperial Rose Jewelry Box" },
-        { url: "https://i.ibb.co/hJn871Sz/Whats-App-Image-2026-02-04-at-10-12-08-PM-Copy.jpg", name: "Ribbed Gilded Vessel" },
+        { url: "https://i.ibb.co/hJn871Sz/Whats-App-Image-2026-02-04-at-10-12-08-PM-Copy.jpg", name: "Imperial Rose Jewelry Box" },
         { url: "https://i.ibb.co/vvMFLjJV/ACS-21.jpg", name: "Artisanal Display Platter" },
         { url: "https://i.ibb.co/WNGh3DkD/ACS-22.jpg", name: "Golden Aura Figurine" },
-        { url: "https://i.ibb.co/R4N3Dn6X/ACS-23.jpg", name: "Floral Plaster Sculpture" },
+        { url: "https://i.ibb.co/R4N3Dn6X/ACS-23.jpg", name: "Golden Aura Figurine" },
         { url: "https://i.ibb.co/pjkT7d0v/ACS-1.jpg", name: "Minimalist Art Totem" },
         { url: "https://i.ibb.co/sJCtcbTh/ACS-3.jpg", name: "Ivory & Gold Accent Pot" },
-        { url: "https://i.ibb.co/LD0fzzDT/ACS-5.jpg", name: "Contemporary Home Ornament" },
-        { url: "https://i.ibb.co/Kx17dGs5/ACS-7.jpg", name: "Textured Gilded Vase" },
+        { url: "https://i.ibb.co/Kx17dGs5/ACS-7.jpg", name: "Modern Vanity Organizer" },
         { url: "https://i.ibb.co/Ld5ftcN1/ACS-9.jpg", name: "Modern Vanity Organizer" },
         { url: "https://i.ibb.co/PvVFCWgs/ACS-11.jpg", name: "Collector's Edition Figurine" },
         { url: "https://i.ibb.co/cc8JmRsT/ACS-13.jpg", name: "Luxury Gift Atelier Piece" },
         { url: "https://i.ibb.co/ymBzSG1W/ACS-15.jpg", name: "Creative Geometry Shapes" },
-        { url: "https://i.ibb.co/3yCYcVsc/ACS-16.jpg", name: "Botanical Golden Dish" },
         { url: "https://i.ibb.co/Q7H9kSCK/ACS-17.jpg", name: "Sculpted Ceramic Form" },
         { url: "https://i.ibb.co/67SHwMRs/ACS-18.jpg", name: "Luxe Votive Holder" },
         { url: "https://i.ibb.co/dsY0Nkjr/ACS-19.jpg", name: "Signature Studio Sculpture" },
@@ -262,17 +158,13 @@
     products.forEach((prod) => {
         grid.innerHTML += `
             <div class="card">
-                <div class="img-container">
-                    <img src="${prod.url}" alt="${prod.name}">
-                </div>
+                <div class="img-container"><img src="${prod.url}" alt="${prod.name}"></div>
                 <div class="info">
                     <h3>${prod.name}</h3>
-                    <a href="https://wa.me/923036871091?text=Bespoke%20Inquiry:%20${encodeURIComponent(prod.name)}" class="buy-btn">Inquire</a>
+                    <a href="https://wa.me/923036871091?text=Asalam-o-Alaikum! I want to order: ${encodeURIComponent(prod.name)}" class="buy-btn">WhatsApp Order</a>
                 </div>
             </div>`;
     });
 </script>
-
 </body>
-
 </html>
